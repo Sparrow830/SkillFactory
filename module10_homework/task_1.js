@@ -1,11 +1,17 @@
-let x = +prompt("Пожалуйста, введите любое число");
+let str = prompt("Пожалуйста, введите любое число");
 
-if (typeof x === 'number' && !isNaN(x)) {
-  if (x % 2 === 0) {
-    console.log("Это число чётное")
-  } else {
-    console.log("Это число нечётное")
-  }
+if (!str.trim()) {
+  console.log("Упс, кажется, вы ошиблись");
 } else {
-  console.log("Упс, кажется, вы ошиблись")
+  let x = +str;
+
+  if (typeof x === 'number' && !isNaN(x)) {
+    if (x % 2 === 0) {
+      console.log("Это число чётное")
+    } else {
+      console.log("Это число нечётное")
+    }
+  } else {
+    console.log("Упс, кажется, вы ошиблись")
+  }
 }
